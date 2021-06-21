@@ -1,0 +1,117 @@
+.head{
+    width: 100px;
+    height: 100px;
+    background: #83A7C9;
+    border-radius: 50%;
+
+}
+.human{
+    position: relative;
+    left: 0;
+    transform: translateX(20px);
+    animation: human 5s infinite;
+}
+.torso{ 
+    width: 10px;
+    height: 100px;
+    background: brown;
+    position: relative;
+    left:45px;
+
+}
+.rightelbow{
+    width: 5px;
+    height: 10px;
+    background: brown;
+    position: relative;
+    left: 40px;
+    top:-28px;
+
+}
+.leftelbow{
+    width: 5px;
+    height: 10px;
+    background: brown;
+    position: relative;
+    left:42px;
+    top: 57px;
+   
+}
+
+.lefthand{ 
+    width: 5px; 
+    height: 40px;
+    background: brown;
+    position: absolute;
+    left: 75px;
+    transform: rotate(125deg);
+    top: 110px;
+}
+.righthand{
+    width: 5px; 
+    height: 40px;
+    background: brown; 
+    position:absolute;  
+    left: 35px;
+    transform:rotate(55deg);
+    top: 110px;
+
+}
+.leftfoot{ 
+    width:10px;
+    height: 100px;
+    background: brown;
+    position: absolute;
+    left: 58px;
+    transform: rotate(125deg);
+    top: 211px;
+    animation-name: walking;
+    transform-origin: top;
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.rightfoot{
+    width:10px;
+    height: 100px;
+    background: brown; 
+    position: absolute;
+    left: 53px;
+    transform: rotate(30deg);
+    transform-origin: top;
+    top: 204px;
+    animation-name: rotation;
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes rotation { 
+    from {
+        transform: rotate(-45deg);
+    }
+    to { 
+        transform: rotate(120deg);
+
+    }
+}
+@keyframes walking{
+    from {
+        transform: rotate(125deg);
+    }
+    to {transform: rotate(-125deg);
+    }
+}
+
+@keyframes human {
+    0% {
+        transform: translate(10px, 10px);
+    }
+    50% {
+        transform: translate(300px, 300px);
+    }
+    100% {transform: translate(500px, 10px);
+    }
+}
+
