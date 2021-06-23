@@ -1,0 +1,59 @@
+
+.topnav{
+   
+    display: flex;
+    flex-direction: column;
+
+}
+.item{ 
+    border-bottom: 1px solid black;
+    margin: 5px;
+}
+
+.accordeon{
+    display:none ;
+    background-color: white;
+}
+
+.item:hover .accordeon {
+    display: block;
+}
+
+.itemname {
+    display:flex;
+    justify-content: space-between
+}
+.item-link{
+    text-decoration: none;
+}
+@media screen and (min-width: 321px) {
+    .topnav {
+        flex-direction: row;
+        border-radius: 5px;
+        border: 3px solid grey;
+        padding: 2px;
+        margin: 5px;
+        flex-wrap: wrap;
+        display: inline-flex;
+        
+
+        
+    }
+    .accordeon{
+        position: absolute;
+        top: 30px;
+        border: 1px solid black;
+
+
+    }
+    .item{
+        border-bottom: none;
+        position: relative;
+    }
+    .item:not(:first-child)::before {
+        content: "|";
+        margin-left: 5px;
+        
+    }
+   
+}
